@@ -1,95 +1,189 @@
-# Shipping App
+# 📦 React Native Shipping App
 
-A React Native/Expo application for booking shipments with real-time shipping rate calculations.
+A beautiful and modern shipping application built with React Native and Expo. This app allows users to book shipments, compare courier rates, and track their packages in real-time.
 
-## Features
+## ✨ Features
 
-- Input fields for pickup & delivery addresses
-- Courier selection (Delhivery, DTDC, Bluedart)
-- Real-time shipping rate calculations
-- Simple and intuitive UI
-- Backend API with MySQL integration
+### Core Features
+- 📍 Smart address input with auto-complete
+- 🚚 Real-time courier rate comparison
+- 💰 Detailed price breakdown with taxes
+- 📱 Beautiful and responsive UI
+- 🎯 Live shipment tracking
 
-## Prerequisites
+### Technical Features
+- ⚡ Built with React Native & Expo
+- 🎨 Custom animated components
+- 🔄 Real-time price calculations
+- 🎯 TypeScript for type safety
+- 🎬 Smooth animations and transitions
 
+## 📱 Screenshots
+
+[Add your screenshots here]
+
+## 🚀 Quick Start
+
+### Prerequisites
 - Node.js (v14 or later)
-- MySQL Server
+- npm or yarn
 - Expo CLI
-- Expo Go app (for mobile testing)
+- Expo Go app on your mobile device
 
-## Setup Instructions
+### Installation
 
-### Frontend (React Native/Expo)
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/shipping-app.git
+cd shipping-app
+```
 
-1. Install dependencies:
-   ```bash
-   cd shipping-app
-   npm install
-   ```
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-2. Start the Expo development server:
-   ```bash
-   npm start
-   ```
+3. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
-3. Use the Expo Go app to scan the QR code and run the app on your device
+4. Scan the QR code with Expo Go app
 
-### Backend (Express/MySQL)
+## 🛠️ Tech Stack
 
-1. Install MySQL and create a database:
-   ```sql
-   CREATE DATABASE shipping_db;
-   ```
+- **Frontend**
+  - React Native
+  - Expo
+  - TypeScript
+  - React Navigation
+  - React Native Animatable
+  - React Native Vector Icons
 
-2. Navigate to the backend directory and install dependencies:
-   ```bash
-   cd shipping-backend
-   npm install
-   ```
+- **State Management**
+  - React Hooks
+  - Context API
 
-3. Create a `.env` file in the backend directory with your MySQL credentials:
-   ```
-   DB_HOST=localhost
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   DB_NAME=shipping_db
-   PORT=3000
-   ```
+- **UI Components**
+  - Custom Animated Components
+  - Linear Gradients
+  - Custom Icons
 
-4. Start the backend server:
-   ```bash
-   node server.js
-   ```
-
-## API Endpoints
-
-- GET `/api/shipping-rates`: Get shipping rates based on pickup and delivery addresses
-  - Query parameters:
-    - `pickup`: Pickup address
-    - `delivery`: Delivery address
-
-## Technologies Used
-
-- React Native/Expo
-- TypeScript
-- Express.js
-- MySQL
-- React Navigation
-- React Native Elements
-
-## Project Structure
+## 📱 App Structure
 
 ```
 shipping-app/
 ├── src/
-│   └── screens/
-│       └── ShippingScreen.tsx
-├── App.tsx
-└── shipping-backend/
-    └── server.js
+│   ├── components/          # Reusable UI components
+│   │   ├── common/         # Common UI elements
+│   │   └── shipping/       # Shipping-specific components
+│   ├── screens/            # App screens
+│   ├── services/           # API services
+│   ├── types/             # TypeScript definitions
+│   ├── constants/         # App constants
+│   └── utils/            # Helper functions
+└── assets/               # Images and icons
 ```
 
-## Notes
+## 🔥 Key Features Explained
 
-- The shipping rate calculation in this demo uses a fixed distance of 10km. In a production environment, you would want to implement proper distance calculation between addresses.
-- The MySQL connection uses default credentials. Make sure to update them with your actual MySQL credentials in the backend server. 
+### 1. Smart Address Input
+- Auto-complete functionality
+- Input validation
+- Error handling
+- Beautiful animations
+
+### 2. Courier Selection
+- Real-time rate comparison
+- Dynamic pricing based on distance
+- Beautiful dropdown interface
+- Courier-specific icons
+
+### 3. Price Calculation
+- Base rate calculation
+- Distance-based pricing
+- Weight considerations
+- Tax calculations
+- Detailed price breakdown
+
+### 4. Shipment Tracking
+- Real-time status updates
+- Timeline view
+- Location tracking
+- Event history
+
+## 🎯 API Integration
+
+The app includes a dummy API service that simulates:
+- Shipping rate calculations
+- Booking creation
+- Shipment tracking
+- Price estimates
+
+Example API response for shipping rates:
+```typescript
+{
+  courier: "delhivery",
+  price: 350,  // Base rate + distance charge
+  breakup: {
+    base: 250,
+    distance: 100,
+    weight: 0,
+    tax: 63
+  }
+}
+```
+
+## 🎨 UI Components
+
+### CustomInput
+- Floating label animation
+- Error state handling
+- Icon support
+- Multi-line support
+
+### CourierDropdown
+- Beautiful modal interface
+- Smooth animations
+- Icon support
+- Error state handling
+
+### PriceBreakdown
+- Detailed cost breakdown
+- Animated display
+- Tax calculations
+- Total amount display
+
+## 📝 Environment Variables
+
+Create a `.env` file in the root directory:
+```env
+API_URL=your_api_url
+GOOGLE_MAPS_KEY=your_google_maps_key
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- React Native team
+- Expo team
+- All contributors
+
+## 📞 Support
+
+For support, email support@shippingapp.com or join our Slack channel. 
