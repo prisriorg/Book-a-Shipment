@@ -19,8 +19,10 @@ A beautiful and modern shipping application built with React Native and Expo. Th
 - 🎬 Smooth animations and transitions
 
 ## 📱 Screenshots
+![Shipping Flow](./ss1.jpg)
+![Shipping Flow](./ss2.jpg)
+![Shipping Flow](./ss3.jpg)
 
-[Add your screenshots here]
 
 ## 🚀 Quick Start
 
